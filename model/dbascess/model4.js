@@ -6,4 +6,10 @@ const getall=async()=>{
 const insert=async(k)=>{
     let a=await con.create(k)
 }
-module.exports={getall,insert}
+
+const maketrue=async(id)=>{
+    const filter={_id:id};
+    const update={important:true};
+    await con.findOneAndUpdate(filter, update);
+}
+module.exports={getall,insert,maketrue}

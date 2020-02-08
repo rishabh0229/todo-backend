@@ -10,6 +10,12 @@ router.get('/insert/:dat',async(req,res)=>{
     await xyz.insert(k)
     res.send("its true")
 })
+router.get('/insertid/:dat',async(req,res)=>{
+    let id=(req.params.dat)
+    
+    await xyz.maketrue(id)
+    res.send("id updated true")
+})
 
 router.get('/data',async(req,res)=>{
     let j=await xyz.getall()

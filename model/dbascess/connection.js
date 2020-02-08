@@ -7,7 +7,11 @@ con.once('open',function(){
 const chilluschema=new mongoose.Schema({
     data:String,
     data:String,
-    data:String
+    data:String,
+    important:Boolean
 })
 const datamodel=mongoose.model('abk',chilluschema);
+// await datamodel.create({_id:id});
+// const filter={_id:id};
+// const update={important:true}
 module.exports=datamodel
